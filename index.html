@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta
+      name="description"
+      content="Clawdbot Mini — a tiny, phone-friendly chatbot you can run locally."
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Clawdbot Mini</title>
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div>
+          <p class="eyebrow">Clawdbot Mini</p>
+          <h1>Build your own chat flow</h1>
+          <p class="subtitle">
+            Offline-ready, phone-first, and easy to customize.
+          </p>
+        </div>
+        <button id="reset" class="ghost" type="button">Reset</button>
+      </header>
+
+      <main class="chat" id="chat" aria-live="polite"></main>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <label class="sr-only" for="message">Your message</label>
+        <input
+          id="message"
+          name="message"
+          type="text"
+          placeholder="Ask Clawdbot Mini anything..."
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+
+      <section class="tips">
+        <h2>Quick prompts</h2>
+        <div class="chip-row">
+          <button class="chip" type="button" data-prompt="What can you do?">
+            What can you do?
+          </button>
+          <button class="chip" type="button" data-prompt="How do I install you?">
+            How do I install you?
+          </button>
+          <button class="chip" type="button" data-prompt="Give me a study plan.">
+            Give me a study plan
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
